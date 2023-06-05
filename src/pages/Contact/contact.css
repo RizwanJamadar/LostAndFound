@@ -1,0 +1,12 @@
+.c-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 8.7rem);
+    width: 100vw;
+}
+
+.c-container h3{
+    font-size: 3rem;
+    color: rgb(152, 3, 3);
+}

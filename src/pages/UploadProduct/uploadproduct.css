@@ -1,0 +1,94 @@
+.up-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: calc(100vh - 8.7rem);
+}
+
+.up-container .row {
+  display: flex;
+  width: 850px;
+  height: 450px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.up-container .row .left {
+  flex: 1 1 45rem;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  border: var(--border);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.up-container .row .left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.up-container .row .right {
+  flex: 1 1 35rem;
+}
+
+.up-container form {
+  width: 100%;
+  padding: 2rem;
+  border: var(--border);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  margin: 1.5rem;
+  background: #fff;
+}
+
+.up-container form h3 {
+  font-size: 2.5rem;
+  color: var(--black);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.up-container form span {
+  display: block;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.up-container form .box {
+  width: 100%;
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  border: var(--border);
+  padding: 1rem 1.2rem;
+  color: var(--black);
+  text-transform: none;
+}
+
+.up-container form .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+
+.up-container form .checkbox label {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--light-color);
+}
+
+.up-container form .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 1.5rem 0;
+  width: 100%;
+}

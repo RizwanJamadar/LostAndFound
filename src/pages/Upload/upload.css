@@ -1,0 +1,48 @@
+.u-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100vh - 8.7rem);
+    width: 100vw;
+    background: rgba(255,255,255,.9);
+}
+
+.u-container .img{
+    width: 600px;
+    height: 370px;
+    border: .2rem dashed #555;
+    margin-bottom: 2rem;
+}
+
+.u-container .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.u-container .img span{
+    font-size: 2.5rem;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+}
+
+.buttons label{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 3rem;
+    width: 500px;
+}

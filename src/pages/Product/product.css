@@ -1,0 +1,100 @@
+.p-container{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: row;
+     flex-wrap: wrap;
+     width: 100vw;
+     height: calc(100vh - 8.7rem);
+     z-index: 999;
+}
+
+.p-container .row{
+    display: flex;
+    width: 850px;
+    height: 450px;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.p-container .row .left{
+    flex: 1 1 40rem;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    border: var(--border);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.p-container .row .left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.p-container .row .right{
+    flex: 1 1 40rem;
+    padding: 2rem;
+    border: var(--border);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.p-container .row .right h3{
+    color: var(--black);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.p-container .row .right .Id{
+    display: flex;
+    align-items: center;
+    gap:5px;
+    color: var(--black);
+}
+
+.p-container .row .right .details{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.p-container .row .right .details > div > div{
+    color: var(--black);
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.p-container .row .right .details div{
+    color: #444;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.p-container .row .right .details .desc{
+    font-weight: 400;
+    line-height: 1.9rem;
+    color: #555;
+}
+
+.p-container .row .right .foundin{
+    color: #555;
+    padding-top: .2rem;
+}
+
+.p-container .row .right .roomno{
+    color: #555;
+    padding-top: .2rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px){
+    .p-container{
+        padding: 2rem;
+        height: 100%;
+        overflow-y: scroll;
+    }
+}
