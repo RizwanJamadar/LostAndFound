@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './card.css'
-import bottle from "../../assets/Bottle.jpg";
+// import bottle from "../../assets/Bottle.jpg";
 
 const Card = (item) => {
   return (
