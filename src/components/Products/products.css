@@ -146,10 +146,21 @@ tbody tr.hide td{
 }
 
 
-
-
 @media (max-width: 768px){
     .products{
         margin-bottom: 4rem;
+    }
+
+    .table__header{
+        gap: 15px;
+    }
+
+    .table__header h1{
+        font-size: 1.5rem;
+        padding-left: 1rem;
+    }
+
+    .table__header .input-group{
+        width: 30rem;
     }
 }
