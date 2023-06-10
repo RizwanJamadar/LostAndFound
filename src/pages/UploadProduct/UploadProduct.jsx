@@ -14,13 +14,15 @@ const UploadProduct = () => {
           <form action=''>
             <h3>Product Details</h3>
             <span>Name</span>
-            <input type="text" name="" placeholder="Ex., Book" className="box" required />
-            <span>Description</span>
-            <textarea cols="8" rows="1" name="" placeholder="Desc..." className="box" required style={{resize:"none"}} />
+            <input type="text" name="" placeholder="Phone" className="box" required />
+            <span>Color</span>
+            <input type="text" name="" placeholder="Black" className="box" required />
+            <span>Model</span>
+            <input type="text" name="" placeholder="Iphone 14" className="box" required />
             <span>Found In</span>
-            <input type="text" name="" placeholder="Ex., Library" className="box" required />
+            <input type="text" name="" placeholder="Library" className="box" required />
             <span>Room No</span>
-            <input type="number" name="" placeholder="Ex., 218" className="box" required />
+            <input type="number" name="" placeholder="218" className="box" required />
             <button type='submit' className='btn'><UploadIcon sx={{ fontSize: "20px" }} /> Upload</button>
           </form>
         </div>

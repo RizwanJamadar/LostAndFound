@@ -8,6 +8,7 @@ import Product from './pages/Product/Product'
 import Upload from './pages/Upload/Upload'
 import UploadProduct from './pages/UploadProduct/UploadProduct';
 import Contact from './pages/Contact/Contact'
+import Products from './components/Products/Products';
 
 const App = () => {
   return (
@@ -17,7 +18,8 @@ const App = () => {
           <Route path='/' element={<Home />}></Route>
           <Route path='/signup' element={<><Signup /></>}></Route>
           <Route path='/login' element={<><Login /></>}></Route>
-          <Route path='/product/:id' element={<Product/>}></Route>
+          <Route path='/products' element={<><Products /></>}></Route>
+          <Route path='/products/:id' element={<Product/>}></Route>
           <Route path='/upload' element={<><Upload /></>}></Route>
           <Route path='/upload/details' element={<><UploadProduct /></>}></Route>
           <Route path='/contact' element={<><Contact/></>}></Route>

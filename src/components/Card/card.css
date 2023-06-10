@@ -27,20 +27,24 @@
 .details{
   margin: 0.7rem 1rem;
   padding: 0.5rem;
-}
-
-.catCard .desc {
-  font-weight: 300;
-    font-size: 1.3rem;
-    color: #666;
-    line-height: 1.9rem;
-    margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
 .catCard .title {
-  font-size: 2.5rem;
-  font-weight: 800;
+  text-align: left;
+  font-size: 2.2rem;
+  font-weight: 600;
   color: var(--black);
+}
+
+.details div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .foundIn{

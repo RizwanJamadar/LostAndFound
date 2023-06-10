@@ -1,0 +1,17 @@
+.home{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px){
+    .home{
+        margin-bottom: 4rem;
+    }
+}

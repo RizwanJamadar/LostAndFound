@@ -9,16 +9,16 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
 
-  // const currentUSer = {
-  //   img: "https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  //   username: "John Doe",
-  //   isAdmin: true
-  // };
+  const currentUSer = {
+    img: "https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    username: "John Doe",
+    isAdmin: true
+  };
 
-  const currentUSer = null;
+  // const currentUSer = null;
 
-  window.onmouseover= () =>{
-    setActive(false)
+  window.onmouseover = () => {
+    setActive(false);
   }
 
   return (
@@ -47,8 +47,6 @@ const Navbar = () => {
 
           <div className={active ? "links active" : "links"}>
             <Link to="/"><span>Home</span></Link>
-            <Link to="/contact"><span>About us</span></Link>
-            <Link to="/"><span>Products</span></Link>
             <Link to="/contact"> <span>Contact Us</span></Link>
             {
               currentUSer?.isAdmin && (
@@ -68,7 +66,7 @@ const Navbar = () => {
               fontWeight: "800",
               display: "none"
             }} /></Link>}
-            
+
             {
               currentUSer && (
                 <>

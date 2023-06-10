@@ -1,6 +1,8 @@
 .header {
-  position: sticky;
-  top:0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
   z-index: 999;
   background: #fff;
   display: flex;
@@ -34,16 +36,16 @@ html {
 
 .links {
   display: flex;
-  align-items: center;
-  gap: 24px;
-  font-weight: 500;
+  position: relative;
+  float: left;
 }
 
 .links span {
+  padding: 1.5rem;
+  display: block;
   white-space: nowrap;
   cursor: pointer;
   font-size: 1.7rem;
-  margin: 0 1rem;
   color: var(--black);
   transition: all 300ms ease-in;
 }
@@ -52,7 +54,7 @@ html {
   color: var(--blue);
 }
 
-.firstDiv{
+.firstDiv {
   display: none;
 }
 
@@ -97,7 +99,6 @@ html {
 }
 
 @media (max-width: 768px) {
-
   html {
     overflow-x: hidden;
   }
@@ -106,11 +107,11 @@ html {
     width: 100%;
   }
 
-  header .fa-user{
+  header .fa-user {
     display: block;
   }
 
-  header .firstDiv  {
+  header .firstDiv {
     display: block;
   }
 
@@ -121,26 +122,32 @@ html {
   header .links {
     display: block;
     position: absolute;
-    left: 0;
-    top: 99%;
+    top: 115%;
+    left: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
     background: #fff;
-    border-top: var(--border);
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    margin-left: 1rem;
-    width: 100%;
-    z-index: 1;
-    transition: all .2s linear;
+    width: 25rem;
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: top left;
+    transition: none;
   }
 
   header .links.active {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transform: scale(1);
+    opacity: 1;
+    transition: all 0.2s ease-out;
   }
 
   header .links span {
     display: block;
-    margin: 1.5rem;
     font-size: 2rem;
-    font-weight: 400;
+  }
+
+  header .links span{
+    width: 100%;
   }
 }
 
@@ -150,6 +157,6 @@ html {
   }
 
   header {
-    width: 1024px;
+    width: 100%;
   }
 }

@@ -16,7 +16,6 @@ const Login = () => {
           <label htmlFor="remember-me">remember me</label>
         </div>
         <input type="submit" value="sign in" className="btn" />
-        <p>forgot password ? <span>click here</span></p>
         <p>don't have an account ? <Link to="/signup"> <span>create one </span> </Link></p>
       </form>
     </div>

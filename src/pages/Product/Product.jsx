@@ -2,6 +2,7 @@ import React from 'react'
 import './product.css'
 
 const Product = () => {
+  const isuser = true;
   return (
     <div className='p-container'>
       <div className='row'>
@@ -13,11 +14,13 @@ const Product = () => {
           <div className='details'>
             <div className='Id'><div>Id:</div> 000001</div>
             <div className='title'><div>Name:</div> IPhone</div>
-            <div className='desc'><div>Desc:</div> Black in color Portable Water Bottle Sports Water Cup Large-capacity Student Water Bottle Fitness Cup Straw.....</div>
             <div className='fouondin'><div>Found In:</div> Classroom</div>
-            <div className='roomno'><div>Room No:</div> 322</div>
+          <div className='roomno'><div>Room No:</div> 322</div>
           </div>
           <button className='btn'>Collect it</button>
+          {
+            isuser && <button className='btn delete'>Collected</button>
+          }
         </div>
       </div>
     </div>

@@ -1,12 +1,17 @@
 import React from 'react'
 import './home.css'
-import Products from '../../components/Products/Products'
+import Card from '../../components/Card/Card'
+import { category } from '../../data'
 
 const Home = () => {
   return (
-    <>
-    <Products/>
-    </>
+    <div className='home'>
+     {
+        category.map((item)=>(
+          <Card key={item.id} {...item}/>
+        ))
+      }
+    </div>
   )
 }
 

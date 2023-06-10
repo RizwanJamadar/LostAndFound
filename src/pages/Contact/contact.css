@@ -4,9 +4,53 @@
     justify-content: center;
     height: calc(100vh - 8.7rem);
     width: 100vw;
+    background: rgba(255,255,255,.9);
+    margin-top: 8rem;
 }
 
-.c-container h3{
-    font-size: 3rem;
-    color: rgb(152, 3, 3);
+.c-container form{
+    width: 40rem;
+    padding: 1.7rem;
+    border: var(--border);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    margin: 1.5rem;
+    background: #fff;
 }
+
+.c-container form h3{
+    font-size: 2.5rem;
+    color: var(--black);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.c-container form span{
+    display: block;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.c-container form .box{
+    width: 100%;
+    margin: .5rem 0;
+    font-size: 1.3rem;
+    border-radius: .5rem;
+    border: var(--border);
+    padding: 1rem 1.2rem;
+    color: var(--black);
+    text-transform: none;
+}
+
+.c-container form .btn{
+    text-align: center;
+    margin: 1.5rem 0;
+    width: 100%;
+}
+
+.c-container form div{
+    display: flex;
+    font-size: 1.3rem;
+    align-items: center;
+}
+
