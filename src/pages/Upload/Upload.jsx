@@ -1,15 +1,45 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import './upload.css'
-// import bottle from '../../assets/Bottle.jpg'
 import UploadIcon from '@mui/icons-material/Upload';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+// import upload from '../../utils/upload';
 
 const Upload = () => {
-  // const ref = useRef(null);
-  const [image, setImage] = useState("");
+  const navigate = useNavigate();
+  const [image, setImage] = useState(null);
 
+  // To handle image or set current selected image
   const handleImage = (e) => {
     setImage(e.target.files[0])
+  }
+
+  // upload function for converting images to url
+  const upload = async (file) => {
+    const data = new FormData();
+    data.append("file", file);
+    data.append("upload_preset", "lostandfound");
+
+    try {
+      const res = await axios.post("https://api.cloudinary.com/v1_1/desqsr61l/upload", data);
+
+      const { url } = res.data;
+      return url;
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  // submit url to next page or db
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const url = await upload(image);
+    try {
+      console.log(url)
+      navigate("/upload/details")
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   return (
@@ -23,7 +53,7 @@ const Upload = () => {
           <input type='file' accept="image/*" id='file' style={{ display: "none" }} onChange={handleImage} />
         </div>
         <div>
-          {image && <Link to='/upload/details'><button className='btn'>Next</button></Link>  }
+          {image && <Link><button className='btn' onClick={handleSubmit}>Next</button></Link>}
         </div>
       </div>
     </div>
