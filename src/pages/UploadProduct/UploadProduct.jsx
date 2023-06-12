@@ -19,10 +19,22 @@ const UploadProduct = () => {
             <input type="text" name="" placeholder="Black" className="box" required />
             <span>Model</span>
             <input type="text" name="" placeholder="Iphone 14" className="box" required />
-            <span>Found In</span>
-            <input type="text" name="" placeholder="Library" className="box" required />
-            <span>Room No</span>
-            <input type="number" name="" placeholder="218" className="box" required />
+            <div>
+              <span>Found In</span>
+              <input type="text" name="" placeholder="Library" className="box" required />
+              <span>Room No</span>
+              <input type="number" name="" placeholder="218" className="box" required />
+              <span>Category</span>
+              <select name="couses" class="box" required>
+                <option value="" disabled selected>select the category --</option>
+                <option value="idcards">Id Cards</option>
+                <option value="calculators">Calculators</option>
+                <option value="waterbottles">Water Bottles</option>
+                <option value="electronics">Electronics</option>
+                <option value="statinaries">Statinaries</option>
+                <option value="others">Others</option>
+              </select>
+            </div>
             <button type='submit' className='btn'><UploadIcon sx={{ fontSize: "20px" }} /> Upload</button>
           </form>
         </div>

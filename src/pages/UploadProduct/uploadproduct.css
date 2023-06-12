@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   width: 100vw;
   height: calc(100vh - 8.7rem);
-  margin-top: 6rem;
+  margin-top: 5rem;
   padding: 2rem 4rem;
   box-sizing: border-box;
 }
@@ -73,17 +73,9 @@
   text-transform: none;
 }
 
-.up-container form .checkbox {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem 0;
-}
-
-.up-container form .checkbox label {
-  font-size: 1.5rem;
+.up-container form select,
+.up-container form option{
   cursor: pointer;
-  color: var(--light-color);
 }
 
 .up-container form .btn {
@@ -98,5 +90,9 @@
 @media (max-width: 768px) {
   .up-container .row {
     height: 450px;
+  }
+
+  .up-container{
+    margin: 3rem 0;
   }
 }
