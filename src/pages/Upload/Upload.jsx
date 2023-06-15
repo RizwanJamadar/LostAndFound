@@ -24,6 +24,7 @@ const Upload = () => {
       const res = await axios.post("https://api.cloudinary.com/v1_1/desqsr61l/upload", data);
 
       const { url } = res.data;
+      console.log(url);
       return url;
     } catch (err) {
       console.log(err);
@@ -36,7 +37,12 @@ const Upload = () => {
     const url = await upload(image);
     try {
       console.log(url)
-      navigate("/upload/details")
+
+      const id1 = url.split("/")[6];
+      const id2 = url.split("/")[8];
+      navigate(`/upload/details/${id1}/${id2}`)
+
+
     } catch (err) {
       console.log(err)
     }

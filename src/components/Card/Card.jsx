@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom'
 import './card.css'
 
 const Card = (item) => {
+
+
+
+  
   return (
     <Link to="/products" className="link">
       <div className='catCard'>
