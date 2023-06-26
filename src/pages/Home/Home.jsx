@@ -1,12 +1,11 @@
 import React from 'react'
 import './home.css'
-import Card from '../../components/Card/Card'
-import { category } from '../../data'
 import { setProducts } from '../../redux/actions/actions'
 import { useEffect, useState } from 'react'
 import axios from 'axios';
 import { useDispatch, useSelector } from "react-redux";
 import { constant } from '../../constants'
+import Slider from '../../components/Slider/Slider'
 
 const Home = () => {
 
@@ -37,11 +36,10 @@ const Home = () => {
 
   return (
     <div className='home'>
-      {
-        category.map((item) => (
-          <Card key={item.id} {...item} />
-        ))
-      }
+      <div className='img'>
+        <img src='/img/main.png' alt='' />
+      </div>
+      <Slider />
     </div>
   )
 }

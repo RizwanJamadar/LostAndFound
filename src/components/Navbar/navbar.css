@@ -12,6 +12,7 @@
   box-shadow: var(--box-shadow);
 }
 
+
 html {
   overflow-x: hidden;
 }
@@ -27,6 +28,15 @@ html {
   font-size: 2.5rem;
   color: var(--black);
   font-weight: bolder;
+
+  /* height: 60px;
+  width: 60px; */
+}
+
+.container .logo img{
+  width: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .container .logo .dot {
@@ -45,13 +55,40 @@ html {
   display: block;
   white-space: nowrap;
   cursor: pointer;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
+  font-weight: 400;
   color: var(--black);
   transition: all 300ms ease-in;
 }
 
 .links span:hover {
   color: var(--blue);
+  font-weight: 500;
+} 
+/* 
+.links .active~span{
+  color: var(--blue);
+} */
+
+.links .sub-links {
+  position: absolute;
+  top: 50px;
+  right: -7rem;
+  width: 18rem;
+  border: var(--border);
+  border-radius: 0.5rem;
+  border-top: none;
+  background: #fff;
+  transition: 1s ease-out;
+  display: none;
+}
+
+.links :hover .sub-links {
+  display: block;
+}
+
+.links .sub-links NavLink{
+  width: 100%;
 }
 
 .firstDiv {
@@ -71,7 +108,7 @@ html {
   gap: 10px;
   cursor: pointer;
   position: relative;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .user img {
@@ -84,7 +121,7 @@ html {
 .user .options {
   position: absolute;
   top: 50px;
-  right: 0;
+  right: -5rem;
   padding: 20px;
   background-color: white;
   border-radius: 10px;
@@ -94,8 +131,8 @@ html {
   flex-direction: column;
   gap: 10px;
   width: 150px;
-  font-weight: 300;
-  color: gray;
+  font-weight: 400;
+  color: #777;
 }
 
 @media (max-width: 768px) {
@@ -148,6 +185,13 @@ html {
 
   header .links span{
     width: 100%;
+  }
+
+  header .links .sub-links{
+    width: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
   }
 }
 

@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import './navbar.css'
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const Navbar = () => {
 
@@ -17,9 +18,9 @@ const Navbar = () => {
 
   // const currentUSer = null;
 
-  window.onmouseover = () => {
-    setActive(false);
-  }
+  // window.onmouseover = () => {
+  //   setActive(false);
+  // }
 
   return (
     <>
@@ -39,22 +40,34 @@ const Navbar = () => {
           </div>
 
           <div className='logo'>
-            <Link to="/" className='link'>
-              <span className='text'>Lost</span>
-            </Link>
+            <NavLink to="/" className='link'>
+              <span className='text'>Found</span>
+            </NavLink>
             <span className='dot'>.</span>
+
+            {/* <img src='img/logo.jpg'/> */}
           </div>
 
           <div className={active ? "links active" : "links"}>
-            <Link to="/"><span>Home</span></Link>
-            <Link to="/contact"> <span>Contact Us</span></Link>
+            <NavLink to="/"><span>Home</span></NavLink>
+            <NavLink to="/contact"> <span>Contact Us</span></NavLink>
             {
               currentUSer?.isAdmin && (
                 <>
-                  <Link className='link' to="/upload" ><span>Add product</span></Link>
+                  <NavLink className='link' to="/upload" ><span>Add product</span></NavLink>
                 </>
               )
             }
+            <NavLink to="/products" ><span>Proucts <KeyboardArrowDownIcon /></span>
+              <div className='sub-links'>
+                <span>All</span>
+                <span>Electronics</span>
+                <span>Stationary</span>
+                <span>Calculator</span>
+                <span>Id Cards</span>
+                <span>Others</span>
+              </div>
+            </NavLink>
           </div>
 
           <div className="login_btn">

@@ -57,9 +57,13 @@
 }
 
 .up-container form span {
-  display: block;
+  display: flex;
   padding-top: 1rem;
   font-size: 1.5rem;
+}
+
+.up-container form span p{
+  color: rgb(255, 18, 18);
 }
 
 .up-container form .box {

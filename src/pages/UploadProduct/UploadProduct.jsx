@@ -20,22 +20,22 @@ const UploadProduct = () => {
     model: '',
     room: '',
     roomNumber: 0,
-    category:''
+    category: ''
   });
-  
-  const handleProductNameChange = (event) =>{
+
+  const handleProductNameChange = (event) => {
     setFormData({ ...formData, productName: event.target.value });
   }
-  const handleColorChange = (event) =>{
+  const handleColorChange = (event) => {
     setFormData({ ...formData, color: event.target.value });
   }
-  const handleModelChange = (event) =>{
+  const handleModelChange = (event) => {
     setFormData({ ...formData, model: event.target.value });
   }
-  const handleRoomChange = (event) =>{
+  const handleRoomChange = (event) => {
     setFormData({ ...formData, room: event.target.value });
   }
-  const handleRoomnumberChange = (event) =>{
+  const handleRoomnumberChange = (event) => {
     setFormData({ ...formData, roomNumber: event.target.value });
   }
   const handleCategoryChange = (event) => {
@@ -70,7 +70,7 @@ const UploadProduct = () => {
           console.log(res)
 
           if (res.status === 200) {
-            
+
             alert("Product ID:  " + res.data.uniqueId)
             console.log(res.data);
             console.log(res.data.uniqueId)
@@ -95,28 +95,26 @@ const UploadProduct = () => {
         <div className='right'>
           <form action=''>
             <h3>Product Details</h3>
-            <span>Name</span>
+            <span>Name<p>*</p></span>
             <input type="text" name="" placeholder="Phone" className="box" onChange={handleProductNameChange} required />
-            <span>Color</span>
+            <span>Color<p>*</p></span>
             <input type="text" name="" placeholder="Black" className="box" onChange={handleColorChange} required />
             <span>Model</span>
-            <input type="text" name="" placeholder="Iphone 14" className="box" onChange={handleModelChange} required />
-            <div>
-              <span>Found In</span>
-              <input type="text" name="" placeholder="Library" className="box" onChange={handleRoomChange} required />
-              <span>Room No</span>
-              <input type="number" name="" placeholder="218" className="box" required onChange={handleRoomnumberChange} />
-              <span>Category</span>
-              <select name="couses" class="box" onChange={handleCategoryChange} required>
-                <option value="" disabled selected>select the category --</option>
-                <option value="idcards">Id Cards</option>
-                <option value="calculators">Calculators</option>
-                <option value="waterbottles">Water Bottles</option>
-                <option value="electronics">Electronics</option>
-                <option value="stationary">Statinaries</option>
-                <option value="others">Others</option>
-              </select>
-            </div>
+            <input type="text" name="" placeholder="Iphone 14" className="box" onChange={handleModelChange} />
+            <span>Found In</span>
+            <input type="text" name="" placeholder="Library" className="box" onChange={handleRoomChange}/>
+            <span>Room No</span>
+            <input type="number" name="" placeholder="218" className="box" required onChange={handleRoomnumberChange} />
+            <span>Category<p>*</p></span>
+            <select name="category" class="box" onChange={handleCategoryChange} required>
+              <option value="" disabled selected>select the category --</option>
+              <option value="idcards">Id Cards</option>
+              <option value="calculators">Calculators</option>
+              <option value="waterbottles">Water Bottles</option>
+              <option value="electronics">Electronics</option>
+              <option value="stationary">Statinaries</option>
+              <option value="others">Others</option>
+            </select>
             <button type='submit' onClick={handleUploadProduct} className='btn'><UploadIcon sx={{ fontSize: "20px" }} /> Upload</button>
           </form>
         </div>

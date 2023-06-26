@@ -26,9 +26,13 @@
 }
 
 .c-container form span{
-    display: block;
+    display: flex;
     padding-top: 1rem;
     font-size: 1.5rem;
+}
+
+.c-container form span p{
+    color: rgb(248, 18, 18);
 }
 
 .c-container form .box{
